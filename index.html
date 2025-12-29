@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Professional Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+
+<!-- AUTH (Signup/Login) -->
+<div id="authBox" class="auth-box">
+  <h2>Sign Up / Login</h2>
+  <input type="text" id="authUser" placeholder="Username">
+  <input type="password" id="authPass" placeholder="Password">
+  <div class="auth-buttons">
+    <button onclick="signup()">Sign Up</button>
+    <button onclick="login()">Login</button>
+  </div>
+</div>
+
+<!-- MAIN SITE -->
+<div id="site" class="hidden">
+
+<header class="navbar">
+  <h2 class="logo">MyPortfolio<span>.</span></h2>
+  <nav>
+    <a href="#home" class="nav-link">Home</a>
+    <a href="#about" class="nav-link">About</a>
+    <a href="#portfolio" class="nav-link">Portfolio</a>
+    <a href="#contact" class="nav-link">Contact</a>
+    <a href="#admin" class="nav-link">Admin</a>
+  </nav>
+  <button id="modeBtn">🌙</button>
+</header>
+
+<!-- HERO SECTION -->
+<section id="home" class="hero blur">
+  <div class="hero-content">
+    <img src="vivek.png" class="profile" alt="Profile">
+    <h1>Hello, I'm <span>Web Developer</span></h1>
+    <p>Professional | Colorful | Animated Portfolio</p><br>
+    <div class="buttons">
+      <a href="resume.pdf" download class="btn">Download Resume</a>
+      <a href="#contact" class="btn outline">Hire Me</a><br>
+    </div>
+    <div class="socials">
+      <a href="https://instagram.com" target="_blank"><img src="instagram.jfif" alt="Instagram"></a>
+      <a href="https://linkedin.com" target="_blank"><img src="linkdin.png" alt="LinkedIn"></a>
+      <a href="https://github.com" target="_blank"><img src="github.png" alt="GitHub"></a>
+      <a href="https://youtube.com" target="_blank"><img src="youtube.png" alt="YouTube"></a>
+      <a href="https://facebook.com" target="_blank"><img src="facebook.png" alt="Facebook"></a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <h1>About Me</h1>
+  <p>I am a tech-savvy individual with a Bachelor's degree in
+    Software Development, seeking employment as a
+    mobile game developer. I am passionate about
+    consistently advancing my knowledge and skills. I have
+    attended multiple seminars and boot camps on coding
+    and game development.</p>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio" class="section">
+  <h1>Portfolio</h1>
+  <form id="projForm">
+    <input type="text" id="ptitle" placeholder="Project Title" required>
+    <input type="text" id="plink" placeholder="Project Link" required>
+    <button class="btn">Add Project</button>
+  </form>
+  <div id="projList" class="cards"></div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <h1>Contact Me</h1>
+  <form id="msgForm">
+    <input type="text" id="mname" placeholder="Name" required>
+    <input type="email" id="memail" placeholder="Email" required>
+    <textarea id="mmsg" placeholder="Message" required></textarea>
+    <button class="btn">Send</button>
+  </form>
+</section>
+
+<!-- ADMIN DASHBOARD -->
+<section id="admin" class="section admin">
+  <h1>Admin Dashboard</h1>
+  <h3>Messages</h3>
+  <table>
+    <thead>
+      <tr><th>Name</th><th>Email</th><th>Message</th><th>Delete</th></tr>
+    </thead>
+    <tbody id="msgTable"></tbody>
+  </table>
+  <h3>Projects</h3>
+  <ul id="adminProj"></ul>
+</section>
+
+<footer>
+  <p>© 2025 desgined by-vivek personal portfolio</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
